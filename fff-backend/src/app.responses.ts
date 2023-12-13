@@ -47,3 +47,15 @@ export class V1 {
     FeatureBlue:boolean;
     
   }
+
+  export class Off {
+    @ApiProperty({example: false})
+    FeatureRed:boolean;
+  
+    @ApiProperty({example: false})
+    FeatureGreen:boolean;
+    
+    @ApiProperty({example: false})
+    FeatureBlue:boolean;
+    
+  }

@@ -17,36 +17,28 @@ export class AppController {
   // routes
   @Get("v2")
   getV2() {
-    return {
-      "features" : {
-        "feature_red":false,
-        "feature_green":true,
-        "feature_blue":false
-      }
-    }
+    var res: V1 = {FeatureRed:false, FeatureBlue:true, FeatureGreen:false}
+    return res
   }
   @ApiOkResponse({type: V3})
   // routes
   @Get("v3")
   getV3() {
-    return {
-      "features" : {
-        "feature_red":false,
-        "feature_green":false,
-        "feature_blue":true
-      }
-    }
+    var res: V1 = {FeatureRed:false, FeatureBlue:false, FeatureGreen:true}
+    return res
   }
   @ApiOkResponse({type: V4})
   @Get("v4")
   getV4() {
-    return {
-      "features" : {
-        "feature_red":false,
-        "feature_green":false,
-        "feature_blue":true
-      }
-    }
+    var res: V1 = {FeatureRed:true, FeatureBlue:true, FeatureGreen:true}
+    return res
+  }
+
+  @ApiOkResponse({type: V4})
+  @Get("off")
+  getOff() {
+    var res: V1 = {FeatureRed:false, FeatureBlue:false, FeatureGreen:false}
+    return res
   }
 }
 
