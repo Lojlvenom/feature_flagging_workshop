@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Dashboard</title>
+</head>
+<body>
+    <!-- Red Feature -->
+ <div>
+    <h1>Home Image</h1>
+    <!-- Rounded switch -->
+    <label class="switch">
+        <input type="checkbox" name="home_image" onclick="home_image(this)" />
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<div>
+    <h1>Form</h1>
+    <!-- Rounded switch -->
+    <label class="switch">
+    <input type="checkbox" name="check_form" onclick="check_form(this)">
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<div>
+    <h1>Background</h1>
+    <!-- Rounded switch -->
+    <label class="switch">
+        <input type="checkbox" name="check_background" onclick="check_background(this)">
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<div>
+    <h1>Navigation</h1>
+    <!-- Rounded switch -->
+    <label class="switch">
+        <input type="checkbox" name="check_navigation" onclick="check_navigation(this)">
+    <span class="slider round"></span>
+  </label>
+</div>
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js" integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
+
+</body>
+</html>

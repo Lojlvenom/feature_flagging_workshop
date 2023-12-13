@@ -12,11 +12,11 @@ struct FeatureFlagWorkshopApp: App {
     let featureManager =  FeaturesManager.shared
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onAppear{
-                    print("on appear 1")
-                    featureManager.getCurrentFeatures()
-                }
+            socketView()
+//                .onAppear{
+//                    print("on appear 1")
+//                    featureManager.getCurrentFeatures()
+//                }
         }
     }
 }

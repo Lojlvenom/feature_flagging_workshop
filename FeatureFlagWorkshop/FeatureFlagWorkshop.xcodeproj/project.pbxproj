@@ -12,6 +12,9 @@
 		06645CFD2B2989C3006F9818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06645CFC2B2989C3006F9818 /* Assets.xcassets */; };
 		06645D012B2989C3006F9818 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06645D002B2989C3006F9818 /* Preview Assets.xcassets */; };
 		06645D082B299AF3006F9818 /* FeaturesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06645D072B299AF3006F9818 /* FeaturesManager.swift */; };
+		06645D0B2B29EDC8006F9818 /* socketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06645D0A2B29EDC8006F9818 /* socketView.swift */; };
+		06645D0E2B29EFB9006F9818 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 06645D0D2B29EFB9006F9818 /* SocketIO */; };
+		06F27BA12B2A1CC30074C572 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F27BA02B2A1CC30074C572 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,8 @@
 		06645D002B2989C3006F9818 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06645D072B299AF3006F9818 /* FeaturesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesManager.swift; sourceTree = "<group>"; };
 		06645D092B299CD1006F9818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		06645D0A2B29EDC8006F9818 /* socketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socketView.swift; sourceTree = "<group>"; };
+		06F27BA02B2A1CC30074C572 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06645D0E2B29EFB9006F9818 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,8 @@
 				06645CFE2B2989C3006F9818 /* FeatureFlagWorkshop.entitlements */,
 				06645CFF2B2989C3006F9818 /* Preview Content */,
 				06645D072B299AF3006F9818 /* FeaturesManager.swift */,
+				06645D0A2B29EDC8006F9818 /* socketView.swift */,
+				06F27BA02B2A1CC30074C572 /* DetailView.swift */,
 			);
 			path = FeatureFlagWorkshop;
 			sourceTree = "<group>";
@@ -90,6 +98,9 @@
 			dependencies = (
 			);
 			name = FeatureFlagWorkshop;
+			packageProductDependencies = (
+				06645D0D2B29EFB9006F9818 /* SocketIO */,
+			);
 			productName = FeatureFlagWorkshop;
 			productReference = 06645CF52B2989C2006F9818 /* FeatureFlagWorkshop.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 06645CEC2B2989C2006F9818;
+			packageReferences = (
+				06645D0C2B29EFB8006F9818 /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 06645CF62B2989C2006F9818 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +161,8 @@
 				06645D082B299AF3006F9818 /* FeaturesManager.swift in Sources */,
 				06645CFB2B2989C2006F9818 /* ContentView.swift in Sources */,
 				06645CF92B2989C2006F9818 /* FeatureFlagWorkshopApp.swift in Sources */,
+				06F27BA12B2A1CC30074C572 /* DetailView.swift in Sources */,
+				06645D0B2B29EDC8006F9818 /* socketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06645D0C2B29EFB8006F9818 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06645D0D2B29EFB9006F9818 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06645D0C2B29EFB8006F9818 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06645CED2B2989C2006F9818 /* Project object */;
 }

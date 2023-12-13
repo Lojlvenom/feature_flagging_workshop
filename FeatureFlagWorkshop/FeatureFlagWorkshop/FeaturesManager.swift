@@ -34,9 +34,9 @@ final class FeaturesManager {
             do {
                 let features = try JSONDecoder().decode(FeatureFlags.self, from: data)
                 DispatchQueue.main.async {
-                    print(features)
+//                    print(features)
                     self.currentFeatures = features
-                    print(self.currentFeatures)
+//                    print(self.currentFeatures)
                 }
             } catch {
                 print(error.localizedDescription)
