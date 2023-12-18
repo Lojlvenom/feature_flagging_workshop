@@ -4,11 +4,15 @@ import { ApiBody, ApiOkResponse, ApiProperty, ApiResponse, ApiTags, ApiOperation
 export class FeaturesGateway {
     @WebSocketServer() server;
 
-    @ApiTags("Feature socket")
-    @ApiOperation({ summary: 'summary goes here' })
-    @ApiOkResponse()
+    
     @SubscribeMessage('features')
     handeMessage(@MessageBody() message: string): void {
         this.server.emit('featureFlags', message);
+    }
+
+
+    @SubscribeMessage('fabiano')
+    handleMessages(@MessageBody() message: string): void {
+        console.log(`Oi, eu sou o Fabiano, voce disse ${message}`);
     }
 }
